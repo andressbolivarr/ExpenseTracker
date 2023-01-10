@@ -10,7 +10,7 @@ import SwiftUICharts
 
 struct ContentView: View {
     @EnvironmentObject var transactionListVM: TransactionListViewModel
-    var demoData: [Double] = [2,4,6,8,10]
+//    var demoData: [Double] = [2,4,6,8,10]
     var body: some View {
         
             NavigationView{
@@ -35,7 +35,7 @@ struct ContentView: View {
                                 }
                                 .background(Color.systemBackgorund)
                             }
-                            .data(demoData)
+                            .data(data)
                             .chartStyle(ChartStyle(backgroundColor: Color.systemBackgorund, foregroundColor: ColorGradient(Color.icon.opacity(0.4), Color.icon)))
                             .frame(height:300)
                         }
