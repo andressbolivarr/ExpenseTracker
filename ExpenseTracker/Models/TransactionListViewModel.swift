@@ -23,7 +23,7 @@ final class TransactionListViewModel: ObservableObject{
     }
     
     func getTransactions(){
-        guard let url = URL(string: "http://127.0.0.1:5500/ExpenseTracker/Assets.xcassets/Data.json") else{
+        guard let url = URL(string: "https://www.eveve.com/Data.json") else{
             print("Invalid URL")
             
             return
@@ -35,7 +35,7 @@ final class TransactionListViewModel: ObservableObject{
                     dump(response)
                     throw URLError(.badServerResponse)
                 }
-                
+                 
                 return data
             }
             .decode(type:[Transaction].self, decoder: JSONDecoder())
